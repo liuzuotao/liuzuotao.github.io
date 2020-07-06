@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>liuzhazha的博客</title><meta name="author" content="ZTliu"><link rel="shortcut icon" href="/img/favicon.png"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><meta name="generator" content="Hexo 4.2.1"></head><body><header id="page_header"><div class="header_wrap"><div id="blog_name"><a class="blog_title" id="site-name" href="/">liuzhazha的博客</a></div><button class="menus_icon"><div class="navicon"></div></button><ul class="menus_items"><li class="menus_item"><a class="site-page" href="/#Publications"> Publications</a></li><li class="menus_item"><a class="site-page" href="/"> About</a></li><li class="menus_item"><a class="site-page" href="https://phower.me" target="_blank" rel="noopener"> Blog</a></li></ul></div></header><main id="page_main"><div class="side-card sticky"><div class="card-wrap" itemscope itemtype="http://schema.org/Person"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/profile.png'" alt="avatar"></div><div class="author-discrip"><h3>ZTliu</h3><p class="author-bio">Your biography can be writed down here.</p></div><div class="author-links"><button class="btn m-social-links">Links</button><ul class="social-icons"><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-stack-overflow" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-weibo" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-weixin" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fab fa-qq" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fas fa-envelope" aria-hidden="true"></i></a></li><li><a class="social-icon" href="/" target="_blank"><i class="fas fa-rss" aria-hidden="true"></i></a></li></ul><ul class="social-links"><li><a class="e-social-link" href="/" target="_blank"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Google Scholar</span></a></li><li><a class="e-social-link" href="/" target="_blank"><i class="fab fa-orcid" aria-hidden="true"></i><span>ORCID</span></a></li></ul></div><a class="cv-links" href="/attaches/CV.pdf" target="_blank"><i class="fas fa-file-pdf" aria-hidden="true"><span>My Detail CV.</span></i></a></div></div><div class="page" itemscope itemtype="http://schema.org/CreativeWork"><article><p>建立github仓库<br>配置config.yml文件<br>线上测试<br>注意事项</p>
+<h3 id="一：建立github仓库"><a href="#一：建立github仓库" class="headerlink" title="一：建立github仓库"></a>一：建立github仓库</h3><p>设置仓库名字为 username.github.io<br><span style="color: red">（名字为你的github名字，否则无法会找到博客，报404）</span></p>
+<p>每一个guthub账号上仅可建立一个可运行的此类库</p>
+<h3 id="二：配置-config-yml文件"><a href="#二：配置-config-yml文件" class="headerlink" title="二：配置_config.yml文件"></a>二：配置_config.yml文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/YourgithubName/YourgithubName.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>安装部署命令<span style="color:red">deploy-git</span> ，这样你才能用命令部署到GitHub</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm install hexo-deployer-git  --save</span><br></pre></td></tr></table></figure>
+<p>上边修改完毕以后，依次执行以下命令，提交本地hexo文件到GitHub。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean<span class="comment">//清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></span><br><span class="line">hexo generate<span class="comment">//生成可发布的静态文件</span></span><br><span class="line">hexo deploy<span class="comment">//根据config文件部署项目</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="三：线上测试"><a href="#三：线上测试" class="headerlink" title="三：线上测试"></a>三：线上测试</h3><p>此时即可访问到你的博客网站<br><span style="color:red"><a href="https://liuzuotao.github.io/">https://liuzuotao.github.io/</a></span></p>
+<h3 id="四：注意事项"><a href="#四：注意事项" class="headerlink" title="四：注意事项"></a>四：注意事项</h3><p>每次更新文章需要做:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean<span class="comment">//清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></span><br><span class="line">hexo generate<span class="comment">//生成可发布的静态文件</span></span><br><span class="line">hexo deploy<span class="comment">//根据config文件部署项目</span></span><br></pre></td></tr></table></figure>
+<p>部署到github 上 需要配置 _config.yml 找到下面的内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: http://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br><span class="line"></span><br><span class="line">修改:</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: http://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https:<span class="comment">//github.com/liuzuotao/liuzuotao.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>注:<br>Github 上新建仓库(repository ) 名字要和你github 上的名字一致 如:github 名字是:liuzuotao. Repository 必须是 liuzuotao.github.io</p>
+<p>这样在Github上才可以部署成功</p>
+<p>NexT 主题 菜单配置<br>多文章写的NexT菜单配置都是官网文档那样的配置，但真正的配置是这样的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: <span class="regexp">/ || home</span></span><br><span class="line"><span class="regexp">  archives: /</span>archives || archive</span><br><span class="line">  categories: <span class="regexp">/categories || th</span></span><br><span class="line"><span class="regexp">  tags: /</span>tags || tags</span><br><span class="line">  about: <span class="regexp">/about || user</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">menu_icons:</span></span><br><span class="line"><span class="regexp">  enable: true</span></span><br></pre></td></tr></table></figure></article><article><ol>
+<li>标题</li>
+<li>列表（有序、无序）</li>
+<li>引用</li>
+<li>链接、图片</li>
+<li>代码块</li>
+<li>表格</li>
+</ol>
+<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ul>
+<li>1无序</li>
+<li>2无序</li>
+<li>3无序</li>
+</ul>
+<ol>
+<li><p>1有序</p>
+</li>
+<li><p>2有序</p>
+</li>
+<li><p>3有序</p>
+</li>
+<li><p>嵌套1</p>
+<ul>
+<li>嵌套1-1</li>
+<li>嵌套1-1</li>
+</ul>
+</li>
+<li><p>嵌套2</p>
+<ul>
+<li>嵌套2-1</li>
+<li>嵌套2-1</li>
+</ul>
+</li>
+</ol>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote>
+<p>123123123</p>
+</blockquote>
+<h1 id="链接、图片"><a href="#链接、图片" class="headerlink" title="链接、图片"></a>链接、图片</h1><p>[百度](<a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a></p>
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSE1Qjv-MApj--9xmx7j8qZUPQMIeDe5-a79g&usqp=CAU" alt="图片描述"></p>
+<h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(Stringp[] args)</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h1><p><span style="color: red">红色文字</span></p>
+</article><article><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</article></div></main><div class="nav-wrap"><div class="nav"><button class="site-nav"><div class="navicon"></div></button><ul class="nav_items"><li class="nav_item"><a class="nav-page" href="/#Publications"> Publications</a></li><li class="nav_item"><a class="nav-page" href="/"> About</a></li><li class="nav_item"><a class="nav-page" href="https://phower.me" target="_blank" rel="noopener"> Blog</a></li></ul></div><div class="cd-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></div></div><footer id="page_footer"><div class="footer_wrap"><div class="copyright">&copy;2020 by ZTliu</div><div class="theme-info">Powered by <a href="https://hexo.io" target="_blank" rel="nofollow noopener">Hexo</a> & <a href="https://github.com/PhosphorW/hexo-theme-academia" target="_blank" rel="nofollow noopener">Academia Theme</a></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery-pjax@latest/jquery.pjax.min.js"></script><script src="/js/main.js"></script></body></html>
