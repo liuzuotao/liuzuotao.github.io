@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://liuzhazha.ink/2020/08/06/ThreadLocal/</loc>
+    <lastmod>2020-08-06</lastmod>
+  </url>  <url>
     <loc>http://liuzhazha.ink/2020/07/09/MyBatis%E5%8A%A8%E6%80%81sql%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2020-07-09</lastmod>
+    <lastmod>2020-08-06</lastmod>
   </url>  <url>
     <loc>http://liuzhazha.ink/2020/07/06/first-blog/</loc>
     <lastmod>2020-07-08</lastmod>
